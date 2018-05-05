@@ -7,11 +7,30 @@
     <title>如何在github上写博客</title>
 </head>
 <body>
-   <p><h4>如何在GitHub上用html写博客</h4></p>
+   <p><h4>如何在GitHub上用html写博客</h4>
    <ol type="I">
-       <li><h4>Method one</h4></li>
-         <h5>1、首先在<a href="https://github.com">github官网</a>上注册账号</h5>
-         <h5>2、登录进github账号后，建立一个<a href="images/cangku.png">仓库</a></h5>
+       <li><h5>方法一:直接在GitHub上写</h5></li>
+       <ol type="1">
+           <li>首先在<a href="https://github.com">github官网</a>上注册账号；</li>
+           <li>登录进github账号后，建立一个<a href="images/cangku.png">仓库</a>，给该仓库取一个名字；</li>
+           <li>进入该仓库后，创建html文件，并编辑文件内容，最后点击提交新文件；</li>
+           <li>进入文件，选择settings->Github pages,将source下的none改为master branch并保存；</li>
+           <li>最后你会在Github Pages下看到一个新生成的地址，复制该地址并在末尾添加文件名构成完整的地址即可看到写的内容.</li>
+       </ol>
+       <li><h5>方法二:利用Git Bash和visual studio code在GitHub上写</h5></li>
+    <ol type="1">
+        <li>开始采取方法一中的前两个步骤，但是要暂时保存创建好仓库的网页，里面有命令行git bash会用到；</li>
+       <li>创建一个文件，并将该文件在Git Bash中打开；</li>
+       <li>在GitHub最上栏的Setting->SSH and GPG keys中点击new SSH key,并填写Title、Key ；</li>
+       <li>在git bash中输入命令行ssh-keygen -t rsa -b 4096 -C "your_email@example.com"；</li>
+       <li>利用命令行cat ~/.ssh/id_rsa.pub来打印生成的文件，就可以获得新建SSH Key时所需要的Key了；</li>
+       <li>再依次输入以下命令git config user.name 'your user name' -g、git config user.email 'your user email' -g；</li>
+       <li>打开创建仓库时的网页，该网页有五个以Gitbash创建仓库时命令，依次输入Git Bash中，这时可以在GitHub的README.md文件下看到blog；</li>
+       <li>打开VS code，在第二步创建的文件下创建html文件，并编辑好内容，选择提交、推送，此时可以在GitHub上看到提交的文件；</li>
+       <li>最后采取和方法一中的最后两个步骤.</li>
+    </ol>
    </ol> 
+   </p>
+   <p>很遗憾的是用图片的时候在GitHub上并不能查看图片，所以大堆文字，好好进步！！！加油！！！</p>
 </body>
 </html>
